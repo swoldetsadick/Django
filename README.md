@@ -25,4 +25,24 @@ Tie it to main_app with **_from main_app import views_**.
 
   * Homepage should be displayed without route.
   * Distinguish between **Project** and **App** URL dispatcher, by creating urls.py to each app in project.
-  * 
+
+### 2.1. The Template of Doom.
+
+[click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_1l91yhag25quxnsxmgaswopagyvq77.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0c6c40ba79057668961e24d64815f9ab19c3c2148b29c9532c6b5a38dcdffa5c63c3e40084d89cc5b1fce062897f99fa0898502297af08)
+
+In **settings.py**, go to _INSTALLED_APPS_ and registered you new app in the list. <br>
+Now you can create a _templates_ directory in said application, and in this directory create **index.html**. <br>
+In the end if **views.py** you render the index.html when request is sent.
+
+Dynamic data in the template? <br>
+
+1. Send data from our view to our template.
+  * create variables in **views.py** request accepting function, and add to context. 
+2. Access that data from inside our template.
+  * Access a variable from the views context in template using curly braces.
+  
+ ### 2.2. More Template Fun.
+  
+[click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_1mua59oko6yqy1hbhdd8bjjtvjqiog.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0c6c40bd7362d6654bc1fb9839d76f800194bddef3c9a40f2d3aec86fa86d107f7fdfdf8ef2cce43752c1dc875a6fb8658d01fd1eb556a)
+
+
