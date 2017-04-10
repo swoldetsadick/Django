@@ -45,4 +45,17 @@ Dynamic data in the template? <br>
   
 [click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_1mua59oko6yqy1hbhdd8bjjtvjqiog.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0c6c40bd7362d6654bc1fb9839d76f800194bddef3c9a40f2d3aec86fa86d107f7fdfdf8ef2cce43752c1dc875a6fb8658d01fd1eb556a)
 
+In the case of complicated data display, how to display data in context? <br>
+Create a Python class for each object and store all instances in a list, just one we put in context. <br>
+Then access this list from the template using _{% for i in list %} and {% endfor %}_.
+Also can use, _{% if cond %} {% else %} {% endif %}_.
+
+### 2.3. More Template Fun.
+  
+[click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_1pq5qgncesuou18b9i31i1zufl10i2.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0c6c40bf7b353a76c3822546d7a08073db1a053d5de26092f9de712a04e4c84b4f63d0727a31c19cf25f1253d2625045bbc49ad1313d87)
+
+Django looks for directory called static in app directory for CSS, Javascript and static images.<br>
+Then in templates add _{% load staticfiles %}_ then add link tag to css file with href _{% static 'style.css' %}_. <br>
+You can add third party CSS here, also /images directory for static images.<br>
+
 
