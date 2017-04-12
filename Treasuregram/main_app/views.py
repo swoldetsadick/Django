@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
+"""Treasuregram View Configuration"""
 from __future__ import unicode_literals
-
 from django.shortcuts import render
 # from django.http import HttpResponse
 
+
 # Create your views here.
 def index(request):
+    """ The function called when going to localhost:8888/index"""
     # rendering HttpResponse
     # return HttpResponse('<h1> Hello World </h1>')
     # When not using object class
@@ -15,9 +17,11 @@ def index(request):
     #    'treasure_name': name,
     #    'treasure_val': value
     # }
-    return render(request, "index.html", {"treasures" : treasures})
+    return render(request, "index.html", {"treasures": treasures})
+
 
 class Treasure:
+    """ This is my Treasure Class. """
     def __init__(self, name, value, material, location):
         self.name = name
         self.value = value
