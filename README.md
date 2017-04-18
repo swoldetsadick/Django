@@ -90,16 +90,27 @@ To create new instances of new object we need to run *Django interactive shell*.
 Then query:
 
 > from main_app.models import Treasure
+
 > Treasure.objects.all()
+
 > Treasure.objects.filter(location='Orlando, FL')
+
 > Treasure.objects.get(pk = 1)
+
 > t = Treasure(name='Coffee can', value=20.00, material='tin', location='Acme, CA')
+
 > t.save()
+
 > t = Treasure(name='Gold Nugget', value=2500.00, material="Gold", location="Curly's Creek, NM")
+
 > t.save()
+
 > t = Treasure(name="Fool's Gold", value=20, material="Pyrite", location="Fool's Falls, CO")
+
 > t.save()
 
 Please add _self str_ to give names to objects in model. Then update _view.py_ by importing the model and changing render function.
 
-
+### 3.2. The Missing Model.
+  
+[click here for video]()
