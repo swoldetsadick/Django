@@ -58,4 +58,48 @@ Django looks for directory called static in app directory for CSS, Javascript an
 Then in templates add _{% load staticfiles %}_ then add link tag to css file with href _{% static 'style.css' %}_. <br>
 You can add third party CSS here, also /images directory for static images.<br>
 
+### 3.1. The Missing Model.
+  
+[click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_j0o146k9a997wg8eug98er5nxunpw3.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0f6142b17acfdce706e8b207df69ae38ec9763b00a2b742e78fc570fba95f7d1ff024299f737a27141d2a4e121b2485d322641502565f2)
+
+*Models* are used to organize and provide views with *data*. 
+Not having object class in _views.py_ and to replace it with a model will make it easy to add instances from GUI.
+How to do it:
+
+in _models.py_:
+* import the *models* class
+* Create class *models.Model*
+* *Use special model types* that correspond to database types.
+
+Django model fields types correspond to Python and SQL field types.
+No SQL because the Django uses Django ORM to translate Django to SQL, except if you have you own data type.
+Then you need to do migrations.
+
+> python manage.py makemigrations
+
+> python manage.py migrate
+
+We could actually use a third command between the two above to see exactly to preview SQL command that will get run.
+
+> python manage.py sqlmigrate main_app-name migration_v_number
+
+To create new instances of new object we need to run *Django interactive shell*.
+
+> python manage.py shell
+
+Then query:
+
+> from main_app.models import Treasure
+> Treasure.objects.all()
+> Treasure.objects.filter(location='Orlando, FL')
+> Treasure.objects.get(pk = 1)
+> t = Treasure(name='Coffee can', value=20.00, material='tin', location='Acme, CA')
+> t.save()
+> t = Treasure(name='Gold Nugget', value=2500.00, material="Gold", location="Curly's Creek, NM")
+> t.save()
+> t = Treasure(name="Fool's Gold", value=20, material="Pyrite", location="Fool's Falls, CO")
+> t.save()
+
+Please add _self str_ to give names to objects in model. Then update _view.py_ by importing the model and changing render function.
+
 

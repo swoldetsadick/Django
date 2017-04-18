@@ -2,6 +2,7 @@
 """Treasuregram View Configuration"""
 from __future__ import unicode_literals
 from django.shortcuts import render
+from .models import Treasure
 # from django.http import HttpResponse
 
 
@@ -17,11 +18,12 @@ def index(request):
     #    'treasure_name': name,
     #    'treasure_val': value
     # }
+    treasures = Treasure.objects.all()
     return render(request, "index.html", {"treasures": treasures})
 
-
+"""
 class Treasure:
-    """ This is my Treasure Class. """
+    " This is my Treasure Class. "
     def __init__(self, name, value, material, location):
         self.name = name
         self.value = value
@@ -33,3 +35,4 @@ treasures = [
     Treasure("Fool's Gold", 0, "Pyrite", "Fool's Falls, CO"),
     Treasure("Coffee Can", 25.00, "Aluminium", "Acme, CA")
 ]
+"""
