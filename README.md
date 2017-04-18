@@ -111,6 +111,19 @@ Then query:
 
 Please add _self str_ to give names to objects in model. Then update _view.py_ by importing the model and changing render function.
 
-### 3.2. The Missing Model.
+### 3.2. The Admin.
   
-[click here for video]()
+[click here for video](https://codeschool-vfs.cdn-ec.viddler.com/codeschool_cd0rj928rmb5l7v0fh7p0rj41bh9tg.mp4?fd9f2a1c14aadf1069f046ce61f41e2b05c31bf4bc1c0f4df9c4be0f6142b07b0e1eff2ffd273bbe4f0b5a6e69198a415122b265cb92dd244295bd47dc83f697e0aa56fef5ef40482b6e36e312e1e06194e1)
+
+Go to [_http://Localhost:8000/admin_](http://Localhost:8000/admin)
+
+It reads metadata from models, from viewing and editing them. This is where trusted users marked as _staff_ can login and
+manage site content. But to do that first:
+
+* *Create a super user*
+
+> python manage.py createsuperuser
+
+Then you can login to admin page. You have then Groups and Users but not objects.
+We need to register models with admin first to view them by registering them in _admin.py_.
+We can then see the model, and all its instances, and adding.
